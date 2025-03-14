@@ -1,0 +1,56 @@
+<div class="container">
+  <!-- The About Section (Left Side) -->
+  <section id="about">
+    <h2>🎂 About the Birthday 🎉</h2>
+    
+    <!-- Sticky Note Container -->
+    <div class="sticky-note-container">
+      <!-- Sticky Note for Date -->
+      <div class="sticky-note">
+        <h3>🎈 Date</h3>
+        <p>{{ birthdayDate }}</p>
+      </div>
+      
+      <!-- Sticky Note for Time -->
+      <div class="sticky-note">
+        <h3>⏰ Time</h3>
+        <p>{{ birthdayTime }}</p>
+      </div>
+      
+      <!-- Sticky Note for Dress Code -->
+      <div class="sticky-note">
+        <h3>👗 Dress Code</h3>
+        <p>{{ dressCode }}</p>
+      </div>
+
+      <!-- Sticky Note for Location -->
+      <div class="sticky-note">
+        <h3>📍 Location</h3>
+        <p><a [href]="locationLink" target="_blank">View on Google Maps</a></p>
+      </div>
+    </div>
+
+    <!-- Map Container -->
+    <div class="map-container">
+      <iframe
+        [src]="safeMapUrl"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- The Other Section (Right Side) -->
+  <div class="other-section">
+    <!-- Balloon and Birthday Decorations -->
+    <div class="decorations">
+      <div class="balloon balloon-1">🎈</div>
+      <div class="balloon balloon-2">🎈</div>
+      <div class="balloon balloon-3">🎈</div>
+      <div class="confetti">🎉</div>
+      <div class="gift">🎁</div>
+      <img src="assets/images/06.jpg" alt="Birthday Photo" class="birthday-photo">
+    </div>
+  </div>
+</div>

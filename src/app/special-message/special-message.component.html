@@ -1,0 +1,17 @@
+<section id="special-message">
+    <h2>A Special Message for {{ daughter1 }} and {{ daughter2 }}</h2>
+
+    <div class="message-container">
+        <div class="message-box" *ngFor="let message of messages">
+            <div class="message-header">
+                <img class="signer-photo" [src]="message.photo" alt="{{ message.signer }}'s photo">
+                <h3>{{ message.signer }}</h3>
+                <span class="emoji">🎈🎉</span>
+            </div>
+            <p class="message-content">{{ message.text }}</p>
+            <div class="bottom-decor">
+                <span class="emoji">🎂💖</span>
+            </div>
+        </div>
+    </div>
+</section>

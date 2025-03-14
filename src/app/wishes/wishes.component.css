@@ -1,0 +1,361 @@
+/* Wishes Container */
+#wishes-container {
+    display: flex;
+    flex-direction: column; /* Stack sections vertically on mobile */
+    align-items: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px; /* Add padding for mobile */
+}
+
+/* Wishes Section (Form) */
+#wishes {
+    flex: 1;
+    width: 100%; /* Full width on mobile */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* Birthday Banner Section */
+#birthday-banner {
+    flex: 1;
+    width: 100%; /* Full width on mobile */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#birthday-banner img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%; /* Ensure form takes full width of its container */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+input:focus, textarea:focus {
+    border-color: #ff6f61;
+    outline: none;
+}
+
+button {
+    background-color: #ffcccb;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff6f58;
+}
+
+/* Messages Container */
+#messages-container {
+    margin: 20px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+#messages-container h3 {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background: linear-gradient(45deg, #ff6f61, #ffcccb); /* Gradient effect */
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px; /* Adds spacing between letters */
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px; /* Add space below the header */
+}
+
+/* Adding a fun confetti effect using pseudo-elements */
+/*
+#messages-container h3::before,
+#messages-container h3::after {
+    content: "🎉 🎂 🎈";
+    position: absolute;
+    font-size: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+}*/
+
+#messages-container h3::before {
+    left: 15px;
+}
+
+#messages-container h3::after {
+    right: 15px;
+}
+
+/* Hover effect */
+#messages-container h3:hover {
+    background: linear-gradient(45deg, #ffcccb, #ff6f61);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+#messages {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 15px;
+}
+
+/* Wisher's Details (Now styled as the message container) */
+.message-card {
+    background-color: #fffbcc; /* Yellow background for wisher's details */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for wisher's details */
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 60px; /* Add space for the photo */
+}
+
+/* Wisher's Name (Sticky Note Style) */
+.message-card h3 {
+    margin: 0 0 10px;
+    color: #ff6f61;
+    font-size: 10px; /* Reduced font size */
+    font-weight: bold;
+    background-color: #fff; /* White background for sticky note */
+    padding: 10px 15px;
+    border-radius: 5px; /* Smaller radius for sticky note */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sticky note shadow */
+    display: inline-block;
+    transform: rotate(-2deg); /* Tilt effect */
+    position: relative;
+}
+
+/* Sticky Note Corner for Wisher's Name */
+.message-card h3::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect for Wisher's Name */
+.message-card h3:hover {
+    transform: rotate(0deg) scale(1.1);
+    transition: all 0.3s ease; 
+}
+
+/* Photo on Top of the Wisher's Details */
+.message-photo {
+    position: relative;
+    width: 100px; /* Fixed size for the circle */
+    height: 100px;
+    margin: -45px auto 30px; /* Adjust margin to prevent cutoff */
+    border-radius: 50%; /* Make it circular */
+    border: 4px solid #ff6f61; /* Add a border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+    overflow: hidden; /* Ensure the image stays within the circle */
+    background-color: #fff; /* Background color for the circle */
+    z-index: 1; /* Ensure the photo is above the message card */
+}
+
+.message-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the circle */
+}
+
+/* Confetti Pseudo-Elements for Wisher's Details */
+.message-card::after {
+    content: "🎉";
+    position: absolute;
+    font-size: 24px;
+    opacity: 0.6;
+    animation: float 5s infinite ease-in-out;
+    bottom: -20px;
+    right: 10px;
+    animation-delay: 2.5s;
+}
+
+/* Confetti Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+/* Initials Avatar for Wisher's Details */
+.initials-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #007bff; /* Blue background */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    #wishes-container {
+        flex-direction: row; /* Side-by-side on desktop */
+    }
+
+    #wishes, #birthday-banner {
+        width: 50%; /* Half width on desktop */
+    }
+}
+
+.char-count {
+    font-size: 0.8em;
+    color: #666;
+    text-align: right;
+    margin-top: 5px;
+}
+
+.photo-name {
+    font-size: 0.9em;
+    color: #333;
+    margin-top: 5px;
+}
+
+.edit-button {
+    background-color: #ffcccb;
+    color: #000;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.edit-button:hover {
+    background-color: #ff6f61;
+}
+
+/* Style for "Leave a Birthday Wish for {{ daughter1 }} and {{ daughter2 }}" */
+#wishes h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6f61; /* Theme color */
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px; /* Adds spacing between letters */
+    position: relative;
+}
+
+/* Add a decorative underline */
+#wishes h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #ff6f61; /* Theme color */
+    border-radius: 2px;
+}
+
+/* Style for "🎉3rd Birthday, Jael, and 1st Birthday, Lael! 🎉🎂✨🎈" */
+#birthday-banner h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff6f61; /* Theme color */
+    text-align: center;
+    margin-top: 20px;
+    
+    letter-spacing: 1px; /* Adds spacing between letters */
+    background-color: #fff; /* White background */
+    padding: 10px 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: inline-block;
+    position: relative;
+}
+
+/* Add a confetti effect */
+#birthday-banner h3::before,
+#birthday-banner h3::after {
+    content: "🎉";
+    position: absolute;
+    font-size: 24px;
+    opacity: 0.6;
+    animation: float 5s infinite ease-in-out;
+}
+
+#birthday-banner h3::before {
+    left: -30px;
+    top: -20px;
+    animation-delay: 0s;
+}
+
+#birthday-banner h3::after {
+    right: -30px;
+    bottom: -20px;
+    animation-delay: 2.5s;
+}
+
+/* Confetti Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}

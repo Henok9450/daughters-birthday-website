@@ -1,0 +1,130 @@
+/* Main section styling */
+#special-message {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+/* Container to align messages side by side */
+.message-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* Increased spacing */
+    padding: 20px;
+}
+
+/* Message box styling */
+.message-box {
+    background: #fffbcc;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    width: 280px;
+    min-width: 220px;
+    max-width: 320px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ffbb33;
+    background: linear-gradient(135deg, #fffbcc, #fffbcc);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    
+    padding-top: 40px; /* Extra padding inside */
+    margin-top: 100px; /* Moves the message box lower */
+}
+
+/* Hover effect */
+.message-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Signer photo - Now positioned even higher above the message box */
+.signer-photo {
+    border-radius: 50%;
+    width: 100px; /* Profile picture size */
+    height: 100px;
+    object-fit: cover;
+    border: 5px solid #ff4081;
+    position: absolute;
+    top: -100px; /* Moves it even further up */
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Message header styling */
+.message-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.5em;
+    color: #ff4081;
+    position: relative;
+    z-index: 1;
+}
+
+/* Message text styling */
+.message-content {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+    font-family: 'Caveat', cursive;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Decorative bottom icons */
+.bottom-decor {
+    font-size: 1.5em;
+}
+
+/* Emoji styling */
+.emoji {
+    font-size: 1.6em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .message-container {
+        flex-direction: column;
+    }
+    .message-box {
+        width: 90%;
+    }
+}
+
+/* Style for "A Special Message for {{ daughter1 }} and {{ daughter2 }}" */
+#special-message h2 {
+    font-size: 28px; /* Larger font size for prominence */
+    font-weight: bold;
+    color: #ff6f61; /* Theme color */
+    text-align: center;
+    margin-bottom: 30px; /* Add space below the heading */
+    letter-spacing: 2px; /* Adds spacing between letters */
+    position: relative;
+    padding: 10px 20px; /* Add padding for better spacing */
+    background-color: #fff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: inline-block; /* Ensure the background wraps the text */
+}
+
+/* Add a decorative underline */
+#special-message h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #ff6f61; /* Theme color */
+    border-radius: 2px;
+}

@@ -1,0 +1,84 @@
+ 
+@import 'swiper/swiper-bundle.css';
+@import '@glidejs/glide/dist/css/glide.core.min.css';
+@import '@glidejs/glide/dist/css/glide.theme.min.css';
+/* @import '@material/image-list/mdc-image-list'; */
+
+@import 'swiper/css'; /* Import core styles */
+@import 'swiper/css/navigation'; /* Import navigation styles (if needed) */
+@import 'swiper/css/pagination'; /* Import pagination styles (if needed) */
+@import 'swiper/css/effect-fade'; /* Import fade effect styles */
+@import 'swiper/swiper-bundle.css';
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+@import 'swiper/css/effect-fade';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #ff6f61;
+}
+
+a {
+  color: #ff6f61;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+section {
+  padding: 20px;
+  margin: 20px auto;
+  /* max-width: 800px; */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  color: #fff;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.button:hover {
+  background-color: #ff4a3d;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gallery img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: #ffcccb;
+  padding: 10px;
+  margin-top: 20px;
+}
