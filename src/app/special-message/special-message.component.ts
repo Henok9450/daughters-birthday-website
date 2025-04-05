@@ -13,8 +13,9 @@ export class SpecialMessageComponent {
   daughter2 = 'Lael';
 
   messages = [
-    { signer: 'Mom', text: 'Happy birthday my darlings! Wishing you a day filled with love and laughter. ❤️', photo: '../../assets/images/mom.jpg' },
-    { signer: 'Dad', text: 'I’m so proud of you both! Enjoy your special day to the fullest! 🎂  እግዚአብሔር ይባርካችሁ ይጠብቃችሁ፤ እግዚአብሔር ፊቱን ያብራላችሁ፤ ይራራላችሁ፤ እግዚአብሔር ፊቱን ይመልስላችሁ፤ ሰላሙንም ይስጣችሁ።', photo: '../../assets/images/dad2.jpg' },
+    { signer: 'Mom', text: 'Happy birthday my darlings! Wishing you a day filled with love and laughter. ❤️ ከተፀነሳችሁበት ጊዜ ጀምሮ የያዝኋችሁ፣ ከተወለዳችሁበት ጊዜ ጀምሮ የተሸከምኋችሁ ስሙኝ። እስከ ሽምግልናችሁ፣ እስከ ሽበትም፣ የምሸከማችሁ እኔ ነኝ፤ እኔው ነኝ። ሠርቻችኋለሁ፤ እሸከማችኋለሁ፤ እደግፋችኋለሁ፤ አድናችኋለሁ።  ——ኢሳያስ 46:4'
+, photo: '../../assets/images/mom.jpg' },
+    { signer: 'Dad', text: 'I’m so proud of you both! Enjoy your special day to the fullest! 🎂  እግዚአብሔር ይባርካችሁ ይጠብቃችሁ፤ እግዚአብሔር ፊቱን ያብራላችሁ፤ ይራራላችሁ፤ እግዚአብሔር ፊቱን ይመልስላችሁ፤ ሰላሙንም ይስጣችሁ። ——ዘኍልቍ 6:24-26', photo: '../../assets/images/dad2.jpg' },
     
   ];
 }

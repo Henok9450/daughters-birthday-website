@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   startCountdown(): void {
-    const birthday = new Date('2025-03-21T21:00:00').getTime();
+    const birthday = new Date('2025-04-12T21:00:00').getTime();
 
     this.countdownInterval = setInterval(() => {
       const now = new Date().getTime();
