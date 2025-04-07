@@ -7,8 +7,8 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
-  birthdayDate = 'Friday, March 21, 2025';
-  birthdayTime = '09:00 PM';
+  birthdayDate = 'Saturday, April 12, 2025';
+  birthdayTime = '03:00 PM';
   locationLink = 'https://www.google.com/maps/@9.0154096,38.8833712,17z?entry=ttu';
   dressCode = 'Wear your favorite birthday-themed costume!';
   daughter1 = 'Jael';
